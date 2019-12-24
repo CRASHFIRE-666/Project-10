@@ -1,14 +1,16 @@
 #include <iostream>
 using namespace std;
+#include <cmath>
+
+
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    float cost;
-    cout<<"Введите цену конфет"<<endl;
-    cin>>cost;
-    for (int i=1; i<=10; i++)
-    {
-        cout<<"Стоимость="<<cost*0.1*i<<endl;
+    double p, k;
+    
+    cin >> p;
+    k = 0.1;
+    while (k <= 1){
+        cout << p * k << endl;
+        k += 0.1;
     }
-    return 0;
 }
