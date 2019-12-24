@@ -1,20 +1,26 @@
 #include <iostream>
-#include <math.h>
 using namespace std;
+#include <cmath>
+
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    int i,n;
-    float rez,a;
-    cout<<"Введите A и N"<<endl;
-    cin>>a>>n;
-    rez=1;
-    i=1;
-    while (i<=n)
-    {
-        rez=rez+(pow(a,i))*pow(-1,i);
-        i++;
+    int n, i, x, t;
+    double a;
+    x = 0;
+    t = 1;
+    cin >> n >> a;
+    if (n > 0){
+        for (i = 1; i <= n; i++){ 
+            x += t;
+            t = -1 * pow (a, i);
+        }
+        cout << x  << endl;
     }
-    cout<<"Результат="<<rez<<endl;
+    else{
+        cout << "НЕВЕРНОЕ ЗНАЧЕНИЕ" << endl;
+    }
+    
+    
     return 0;
 }
